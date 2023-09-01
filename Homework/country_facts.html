@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Country Facts </title>
+<link rel="stylesheet" href="visuals.css">
+<link rel="icon"  href="globe.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+<ul class="topnav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li class="right"><a href="#about">About</a></li>
+</ul>
+
+  
+    
+<!-- taken from facts.net -->
+    <h2>Country Facts</h2>
+   
+ <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Facts</th>
+      <th style="width:40%;">Country</th>
+     
+    </tr>
+    <tr>
+      <td>covers both the highest and lowest points in the whole of South America.</td>
+      <td><a href="https://en.wikipedia.org/wiki/Argentina#Culture" target="_blank"> Argentina </a></td>
+      
+
+        
+    </tr>
+    <tr>
+      <td>is the country with the longest coastline on Earth at 125,000 miles.</td>
+      <td><a href="https://en.wikipedia.org/wiki/Canada" target="_blank"> Canada </a></td>
+    
+    </tr>
+    <tr>
+      <td>Toothpaste originated from</td>
+      <td><a href="https://en.wikipedia.org/wiki/Ancient_Egypt" target="_blank"> Ancient Egypt </a></td>
+     
+    </tr>
+    <tr>
+      <td> is one of the only three countries featuring both Atlantic and Mediterranean coastlines.</td>
+      <td><a href="https://en.wikipedia.org/wiki/Argentina#Culture" target="_blank"> Morocco </a></td>
+     
+    </tr>
+    <tr>
+      <td>The biggest man-made lake in the world could be found in</td>
+      <td><a href="https://en.wikipedia.org/wiki/Zambia" target="_blank"> Zambia </a></td>
+     
+    </tr>
+    <tr>
+      <td>hosted the first-ever Olympics in 776 BCE.</td>
+      <td><a href="https://en.wikipedia.org/wiki/Ancient_Greece" target="_blank"> Ancient Greece </a></td>
+     <tr>
+        <td>Halloween traces its origin to</td>
+        <td><a href="https://en.wikipedia.org/wiki/Ireland" target="_blank"> Ireland </a></td>
+     </tr>
+     <tr>
+        <td>A restaurant in ______ holds the record for being the oldest one still standing.</td>
+        <td><a href="https://en.wikipedia.org/wiki/Spain" target="_blank"> Spain </a></td>
+     </tr>
+     <tr>  
+        <td>The heaviest building in the world is in</td>
+        <td><a href="https://en.wikipedia.org/wiki/Romania" target="_blank"> Romania </a></td>
+    <tr>
+        <td>The highway in ------- is visible from the moon.</td>
+        <td><a href="https://en.wikipedia.org/wiki/Belgium" target="_blank"> Belgium </a></td>
+    </tr>
+     </tr>
+    </tr>
+    <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+    
+  </table>
